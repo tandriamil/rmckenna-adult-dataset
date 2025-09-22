@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+  "name": "Debian",
+
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-extra/features/starship:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.10.18"
+    },
+    "ghcr.io/va-h/devcontainers-features/uv:1": {
+      "version": "0.8.18"
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-ceintl.vscode-language-pack-fr",
+        "ms-azuretools.vscode-containers",
+        "monokai.theme-monokai-pro-vscode",
+        "SonarSource.sonarlint-vscode",
+        "DavidAnson.vscode-markdownlint",
+        "donjayamanne.githistory",
+        "pflannery.vscode-versionlens",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "mechatroner.rainbow-csv"
+      ]
+    }
+  },
+  "mounts": [
+    "type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/vscode/.ssh,readonly"
+  ]
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
