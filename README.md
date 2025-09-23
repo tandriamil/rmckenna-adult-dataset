@@ -1,19 +1,17 @@
-# Application of the rmckenna mechanism to the adult dataset
+# Application of the R.McKenna mechanism to the adult dataset
 
 This repository is based on the mechanism used by
-[Ryan McKenna](https://people.cs.umass.edu/~rmckenna) who won the
+[Ryan McKenna](https://www.ryanhmckenna.com) who won the
 [first place](https://www.nist.gov/ctl/pscr/team-rmckenna) in the
-[Differential Privacy Synthetic Data Challenge](https://www.nist.gov/ctl/pscr/open-innovation-prize-challenges/past-prize-challenges/2018-differential-privacy-synthetic)
-of the NIST in 2018. It is a modification of
-[his submitted solution](https://github.com/usnistgov/PrivacyEngCollabSpace/tree/master/tools/de-identification/Differential-Privacy-Synthetic-Data-Challenge-Algorithms/rmckenna)
-to run on the
-[adult dataset](https://archive.ics.uci.edu/ml/datasets/adult).
+[Differential Privacy Synthetic Data Challenge][nist-challenge] of the NIST
+in 2018. It is a modification of [his submitted solution][submitted-solution]
+to run on the [adult dataset](https://archive.ics.uci.edu/ml/datasets/adult).
 
+[nist-challenge]: https://www.nist.gov/ctl/pscr/open-innovation-prize-challenges/past-prize-challenges/2018-differential-privacy-synthetic
 
+[submitted-solution]: https://github.com/usnistgov/PrivacyEngCollabSpace/tree/master/tools/de-identification/Differential-Privacy-Synthetic-Data-Challenge-Algorithms/rmckenna
 
 ## Installation
-
-Install the Python3 working environment.
 
 ```shell
 # Create the virtual environment
@@ -41,18 +39,14 @@ git clone https://github.com/ryan112358/private-pgm
 export PYTHONPATH=$PYTHONPATH:`pwd`/private-pgm/src
 ```
 
-
-
-## Dataset
+## Downloading the dataset
 
 The adult dataset can be downloaded from
-[this link](https://archive.ics.uci.edu/ml/datasets/adult). Afterwards,
+[this link](https://archive.ics.uci.edu/ml/datasets/adult). Afterward,
 format it using `notebooks/adult-preprocess.ipynb` and generate the required
 domain information file using `notebooks/adult-domain.ipynb`.
 
-
-
-## Generate a synthetic dataset
+## Generating a synthetic dataset
 
 Use the following command to generate a synthetic dataset. You can also
 configure the parameters (use `--help` to list them).
@@ -61,15 +55,7 @@ configure the parameters (use `--help` to list them).
 python adult.py  # --help displays the parameters
 ```
 
-
-
-<!-- TODO ## Extension to another dataset -->
-
-
-
-## Execution on the GPU
-
-### Installation
+## GPU support
 
 Check that the driver of your graphics card is installed and that it supports
 cuda. Install cuda from
@@ -116,7 +102,6 @@ if all((self.backend == 'torch',
     assert np.array_equal(q_as_numpy_array, Q.cpu().numpy())
 ```
 
-
 ### Usage
 
 You can generate a synthetic dataset using GPU by setting the backend parameter
@@ -127,4 +112,9 @@ python adult.py --backend torch  # use --help instead to display the parameters
 ```
 
 You can monitor the usage of the GPU by `watch -d -n 0.5 nvidia-smi`. You can
-also use nvtop (`sudo apt install -y nvtop` then `nvtop`).
+also use `nvtop`:
+
+```shell
+sudo apt install -y nvtop
+nvtop
+```
