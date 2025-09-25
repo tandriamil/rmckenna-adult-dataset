@@ -14,29 +14,11 @@ to run on the [adult dataset](https://archive.ics.uci.edu/ml/datasets/adult).
 ## Installation
 
 ```shell
-# Create the virtual environment
-python3 -m venv venv
+# Clone the R.McKenna repository as a submodule
+git submodule update --init
 
-# Enter in the virtual environment
-. venv/bin/activate
-
-# Install the dependencies
-pip install -r requirements.txt
-```
-
-Clone the [private-pgm repository](https://github.com/ryan112358/private-pgm)
-in another directory and add it to the python path. You can also add the
-configuration of the python path to your `.bashrc` to load it automatically.
-
-```shell
-# Clone it in another directory
-cd ..
-
-# Clone the private-pgm repository
-git clone https://github.com/ryan112358/private-pgm
-
-# Add the src directory to the python path
-export PYTHONPATH=$PYTHONPATH:`pwd`/private-pgm/src
+# Install the Python dependencies in a virtual environment
+uv sync
 ```
 
 ## Downloading the dataset
