@@ -102,7 +102,8 @@ class Mechanism:
         # Load the dataset
         if dataset_path is None:
             dataset_path = self.dataset_path
-        dataset = pd.read_csv(dataset_path)
+
+        dataset = pd.read_pickle(dataset_path)
         logger.info(f'Loaded {len(dataset)} rows from {dataset_path}')
 
         # Backup the order of the columns (without the unwated attributes)
