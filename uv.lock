@@ -1210,7 +1210,7 @@ wheels = [
 
 [[package]]
 name = "jupyterlab"
-version = "4.4.7"
+version = "4.4.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "async-lru" },
@@ -1229,9 +1229,9 @@ dependencies = [
     { name = "tornado" },
     { name = "traitlets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d0/07/b3beaeb5722d4a55e345a38884c67baebd9cec2269c5309ce494485a5858/jupyterlab-4.4.7.tar.gz", hash = "sha256:8c8e225492f4513ebde9bbbc00a05b651ab9a1f5b0013015d96fabf671c37188", size = 22965570, upload-time = "2025-09-03T13:26:40.461Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b4/f1/062e250e4126babed8b62ed3dbe47dfb4761e310a235a815e87b4fe330a3/jupyterlab-4.4.8.tar.gz", hash = "sha256:a89e5a2e9f9295ae039356fc5247e5bfac64936126ab805e3ff8e47f385b0c7e", size = 22967507, upload-time = "2025-09-25T17:26:38.413Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7e/01/44f35124896dd5c73b26705c25bb8af2089895b32f057a1e4a3488847333/jupyterlab-4.4.7-py3-none-any.whl", hash = "sha256:808bae6136b507a4d18f04254218bfe71ed8ba399a36ef3280d5f259e69abf80", size = 12291583, upload-time = "2025-09-03T13:26:35.862Z" },
+    { url = "https://files.pythonhosted.org/packages/d1/3b/82d8c000648e77a112b2ae38e49722ffea808933377ea4a4867694384774/jupyterlab-4.4.8-py3-none-any.whl", hash = "sha256:81b56f33f35be15150e7ccd43440963a93d2b115ffa614a06d38b91e4d650f92", size = 12292452, upload-time = "2025-09-25T17:26:34.289Z" },
 ]
 
 [[package]]
@@ -2668,6 +2668,7 @@ dependencies = [
     { name = "tensorflow" },
     { name = "tensorflow-privacy" },
     { name = "torch" },
+    { name = "ucimlrepo" },
 ]
 
 [package.metadata]
@@ -2687,6 +2688,7 @@ requires-dist = [
     { name = "tensorflow", specifier = "==2.11.1" },
     { name = "tensorflow-privacy", specifier = "==0.6.2" },
     { name = "torch", specifier = "==1.13.1" },
+    { name = "ucimlrepo", specifier = ">=0.0.7" },
 ]
 
 [[package]]
@@ -3248,6 +3250,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466", size = 109391, upload-time = "2025-08-25T13:49:26.313Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548", size = 44614, upload-time = "2025-08-25T13:49:24.86Z" },
+]
+
+[[package]]
+name = "ucimlrepo"
+version = "0.0.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "pandas" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/87/7c/f5a400cc99a5365d153609ebf803084f78b4638b0f7925aa31d9abb62b8e/ucimlrepo-0.0.7.tar.gz", hash = "sha256:4cff3f9e814367dd60956da999ace473197237b9fce4c07e9a689e77b4ffb59a", size = 9369, upload-time = "2024-05-21T06:06:41.465Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3b/07/1252560194df2b4fad1cb3c46081b948331c63eb1bb0b97620d508d12a53/ucimlrepo-0.0.7-py3-none-any.whl", hash = "sha256:0a5ce7e21d7ec850a0da4427c47f9dd96fcc6532f1c7e95dcec63eeb40f08026", size = 8041, upload-time = "2024-05-21T06:06:39.826Z" },
 ]
 
 [[package]]
