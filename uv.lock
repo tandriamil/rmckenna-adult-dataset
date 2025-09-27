@@ -1097,9 +1097,9 @@ wheels = [
 ]
 
 [[package]]
-name = "rmckenna-adult-dataset"
+name = "rad"
 version = "0.2.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "ipykernel" },
     { name = "loguru" },

@@ -1,5 +1,5 @@
 [project]
-name = "rmckenna-adult-dataset"
+name = "rad"
 version = "0.2.0"
 description = "Application of the R. McKenna mechanism to the adult dataset"
 readme = "README.md"
@@ -17,3 +17,7 @@ dependencies = [
     "scipy==1.10.0",
     "ucimlrepo>=0.0.7",
 ]
+
+[build-system]
+requires = ["uv", "uv_build"]
+build-backend = "uv_build"
