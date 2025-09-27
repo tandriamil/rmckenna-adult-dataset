@@ -16,7 +16,9 @@ dependencies = [
     "scikit-learn==1.0.1",
     "scipy==1.10.0",
     "ucimlrepo>=0.0.7",
-    "mbi @ file://${PROJECT_ROOT}/mbi"
+    "mbi @ file://${PROJECT_ROOT}/mbi",
+    "tensorflow-privacy==0.6.2",
+    "tensorflow>=2.13.1"
 ]
 
 [build-system]
