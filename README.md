@@ -37,6 +37,12 @@ configure the parameters (use `--help` to list them).
 python adult.py  # --help displays the parameters
 ```
 
+## Simple test of the mbi module
+
+```shell
+uv run mbi/examples/toy_example.py
+```
+
 ## GPU support
 
 Check that the driver of your graphics card is installed and that it supports
