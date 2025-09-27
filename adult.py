@@ -29,7 +29,7 @@ import matrix
 from mechanism import Mechanism
 
 DEFAULT_PARAMETERS = {
-    'dataset': Path('data') / Path('adult.csv'),
+    'dataset': Path('data') / Path('adult-dataset-pickle.zip'),
     'domain': Path('data') / Path('adult-domain.json'),
     'epsilon': 1.0, 'delta': 2.2820544e-12,
     'save_path': Path('data') / Path('out.csv'),
@@ -219,10 +219,10 @@ class AdultMechanism(Mechanism):
                        ('occupation', 'sex'),
                        ('occupation', 'hours-per-week'),
                        ('relationship', 'sex'),
-                       ('relationship', 'salary'),
+                       ('relationship', 'income'),
                        ('race', 'native-country'),
-                       ('capital-gain', 'salary'),
-                       ('capital-loss', 'salary')]
+                       ('capital-gain', 'income'),
+                       ('capital-loss', 'income')]
 
         self.round2 += [('relationship', 'age'),
                         ('marital-status', 'relationship', 'age'),
