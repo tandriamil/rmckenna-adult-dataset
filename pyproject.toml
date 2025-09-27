@@ -16,6 +16,7 @@ dependencies = [
     "scikit-learn==1.0.1",
     "scipy==1.10.0",
     "ucimlrepo>=0.0.7",
+    "mbi @ file://${PROJECT_ROOT}/mbi"
 ]
 
 [build-system]
