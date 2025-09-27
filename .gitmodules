@@ -1,3 +1,6 @@
 [submodule "mbi"]
 	path = mbi
 	url = https://github.com/ryan112358/mbi
+[submodule "ektelo"]
+	path = ektelo
+	url = https://github.com/ektelo/ektelo.git
